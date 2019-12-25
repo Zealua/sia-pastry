@@ -1,0 +1,19 @@
+
+.list {
+  list-style-type: none
+}
+
+.ul{
+  /*margin-right: 50%;*/
+  border:2px;
+  size: 45px
+}
+
+.marg{
+  margin: 0;
+  color: gray;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  text-align: center
+}

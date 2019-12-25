@@ -1,0 +1,21 @@
+.log {
+  width: 450px;
+  height: 40px;
+  margin-left: -70px;
+}
+/* 
+.d-flex{
+    margin-left: 0px;
+    padding-left: 100px;
+}*/
+select{
+    margin-left: 120px;
+} 
+
+li{
+    margin-left: 20px;
+}
+.logs {
+    width: 550px;
+    margin-left: 70px;
+  }

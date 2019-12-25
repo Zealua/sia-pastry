@@ -1,0 +1,10 @@
+.circle {
+    position: relative;
+    position: absolute;
+    border-radius: 50%;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    background: red;
+    transform: translate(-50%, -50%);
+  }

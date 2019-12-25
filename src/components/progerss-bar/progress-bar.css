@@ -1,0 +1,48 @@
+progress {
+    width: 200px;
+    height: 30px;
+    border: 2px;
+    border-radius: 5px;
+  }
+span{
+  font-size: 30px;
+}
+.red {
+  color: white;
+  size: 18px;
+}
+h5{
+  padding-left: 15%;
+  color: green;
+}
+h4{
+  color: white;
+}
+h3{
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+  .progress {
+   position: relative;
+    height: 40px;
+  }
+  
+  .label{ 
+    padding-top: 7px;
+    float: left;
+  }
+  
+.margin {
+  margin-left:17%;
+  color: rgb(224, 33, 122);
+  size: 35
+}
+.counter{
+  width: 250px;
+  height: 48px;
+}
+.inLi{
+  border: 0px;
+  padding-top: 0px;
+}

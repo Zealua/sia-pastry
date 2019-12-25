@@ -1,0 +1,11 @@
+button{
+    height: 30px;
+    width: 180px;
+    text-align: center;
+    margin-left: 30px;
+}
+input {
+    margin-left: 30px;
+    width: 180px;
+    text-align: center;
+}
