@@ -11,11 +11,13 @@ import {
   FirebaseDatabaseNode,
   FirebaseDatabaseMutation
        } from "@react-firebase/database";
+import Header from '../../header';
 
 export default class PageListHit extends Component {
   render(){
     return(
       <div className='d-flex '>
+        <Header/>
       <ul className='list-group  list-group-horizontal '>
         <li className="list-group-item"><LogList/></li>
         {/*<li className="list-group-item"><LogList/></li>*/}
@@ -36,34 +38,33 @@ class LogList extends Component {
     var x = document.getElementById("path").value;
     console.log( x );
     this.setState({path:x}) 
-}
+  }
 
   render(){
     return(
-    <div>  
-
-
+    <div>
+      <Header/>  
       <div className="send-data">
-
-      <select id="path" onChange={this.selection}>
-              <option value="HS1/">First Fighters </option>
-            <option value="HS2/">Second Fighters </option>
-            <option value="HS3/">Third Fighters </option>
+        <select id="path" onChange={this.selection}>
+          <option value="HS1/">First Fighters </option>
+          <option value="HS2/">Second Fighters </option>
+          <option value="HS3/">Third Fighters </option>
         </select>
         <FirebaseDatabaseProvider firebase={firebase} {...config}>
-     <FirebaseDatabaseNode path={this.state.path} >
-       {d => {
-         const object = d.value;
-         let hitData = [];
-         if (object !== null) {
-           for (let key in object) {
-             if (key === "hits") {
-               for (let keyH in object.hits) {
-                 hitData.push(object.hits[keyH]);
-               }
-             }
-           } 
-         }
+          <FirebaseDatabaseNode path={this.state.path} >
+            {d => {
+              console.log(d);
+              const object = d.value;
+              let hitData = [];
+              if (object !== null) {
+                for (let key in object) {
+                  if (key === "hits") {
+                   for (let keyH in object.hits) {
+                      hitData.push(object.hits[keyH]);
+                    }
+                  }
+                } 
+              }
          let List;
          let counter=0;
          if(hitData.length>1){

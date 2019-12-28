@@ -1,8 +1,8 @@
 export const config = {
-    apiKey: "AIzaSyAPysSsIa14Q9XjwykIA20T8CXSVV4L0Jc",
-    authDomain: "testflayhit.firebaseapp.com",
-    databaseURL: "https://testflayhit.firebaseio.com",
-    projectId: "testflayhit",
-    storageBucket: "testflayhit.appspot.com",
-    messagingSenderId: "710115011937"
+    apiKey: "AIzaSyBKASAZw860Nd1Ljw67rKpnzGCS2iwNbqc",
+    authDomain: "sia-pastry.firebaseapp.com",
+    databaseURL: "https://sia-pastry.firebaseio.com/",
+    projectId: "sia-pastry",
+    storageBucket: "sia-pastry.appspot.com",
+    messagingSenderId: "904149827233"
   };

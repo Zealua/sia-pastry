@@ -15,6 +15,7 @@ import {
   FirebaseDatabaseNode,
   FirebaseDatabaseMutation
        } from "@react-firebase/database";
+import Header from '../../header';
 
 
 export default class PageTest extends Component {
@@ -52,6 +53,7 @@ destructuringJson (string){
 
     return(
       <div>
+        <Header/>
          <div id="section1">
         <label for="path">SELECT FIGHTER</label>
         <select id="path" onChange={this.selection}>
@@ -100,7 +102,7 @@ destructuringJson (string){
                  </ul>
               </div>
                  <h5>{this.hitProper.ip}
-                    <FirebaseDatabaseMutation  type="set" path={`${this.state.path}hits`}>
+                    <FirebaseDatabaseMutation  type="set" path={`${this.state.path}`}>
                         {({ runMutation }) => (
                             <button  onClick={async () => {
                                 runMutation({ "--firstTest":{incr:0, long:0, part:9, power:0, time:"00:00" }});
