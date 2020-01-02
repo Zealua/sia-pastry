@@ -39,9 +39,22 @@ setEmail=(event)=>{
   console.log("h"+emailValue);
 }
 
+getCookie(name) {
+  let matches = document.cookie.match(new RegExp(
+    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+  ));
+  if(matches){
+    console.log(matches[1]==="true");
+    return matches[1]==="true"; //matches ? decodeURIComponent(matches[1]) : undefined;
+  } else{
+    return false;
+  }
+}
+
 checkUser=() => {
-  if(this.state.email === this.state.security.email && this.state.pass === this.state.security.pass){
+  if((this.state.email === this.state.security.email && this.state.pass === this.state.security.pass) || this.getCookie("Login")){
     this.setState({onLoggin:true});
+    document.cookie = "Login=true";
   } else {
     alert("We don't know you !!!")
   }
@@ -49,7 +62,9 @@ checkUser=() => {
 
 render() {
   const path = "/admin/Security";//this.props.path;
-  if(!this.state.onLoggin){
+  const login = this.getCookie("Login");
+  console.log("onLoggin: "+ this.state.onLoggin + "loggin:" + login);
+  if(!this.state.onLogginlo && !login){
     return (
       <div>
       <FirebaseDatabaseProvider firebase={firebase} {...config}>
