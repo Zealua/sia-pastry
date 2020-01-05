@@ -16,6 +16,7 @@ import {
   FirebaseDatabaseMutation
        } from "@react-firebase/database";
 import Header from '../../header';
+import Footer from '../../template/footer';
 
 
 export default class PageTest extends Component {
@@ -117,6 +118,7 @@ destructuringJson (string){
         </FirebaseDatabaseNode>
       </FirebaseDatabaseProvider>
       </div>
+      <Footer/>
       </div>
     );
   }

@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
 import './main-page.css';
 
-import * as firebase from "firebase/app";
-
-import { config } from "../../../config";
-
-import {
-  FirebaseDatabaseProvider,
-  FirebaseDatabaseNode,
-  FirebaseDatabaseMutation
-       } from "@react-firebase/database";
+// import {
+//   FirebaseDatabaseProvider,
+//   FirebaseDatabaseNode,
+//   FirebaseDatabaseMutation
+//        } from "@react-firebase/database";
 import Header from '../../header';
+import Footer from '../../template/footer';
+import PhotoSlider from '../../template/photo-slider';
 
 
 export default class MainPage extends Component {
@@ -25,8 +23,16 @@ export default class MainPage extends Component {
   
 
     return(
-      <div>
-        <Header/>
+      <div className="row">
+        <div className="col">
+          <Header/>
+        </div><div className="w-100"></div>       
+        <div className="col">
+          <PhotoSlider amount="9" />
+        </div><div className="w-100"></div>
+        <div className="col">
+          <Footer/>
+        </div>
       </div>
     );
   }

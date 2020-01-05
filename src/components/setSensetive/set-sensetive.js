@@ -50,9 +50,9 @@ export default class SetSensetive extends Component {
                         if(this.state.setSensetive>50&&this.state.setSensetive<1000&&
                            this.state.setFront>50&&this.state.setFront<1000&&
                            this.state.setHold>50&&this.state.setHold<1000){
-                         const { key } = await runMutation({ PARAM: this.state.setSensetive , 
-                                                             Front: this.state.setFront,
-                                                             HOLD: this.state.setHold});
+                        //  const { key } = await runMutation({ PARAM: this.state.setSensetive , 
+                        //                                      Front: this.state.setFront,
+                        //                                      HOLD: this.state.setHold});
                             alert('Hit param set OK');    
                         } else alert("Namber must be integer,more then 50 and less 1000");
                       }}

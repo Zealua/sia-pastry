@@ -8,20 +8,21 @@ import * as firebase from "firebase/app";
 
 import {
   FirebaseDatabaseProvider,
-  FirebaseDatabaseNode,
-  FirebaseDatabaseMutation
+  FirebaseDatabaseNode
        } from "@react-firebase/database";
 import Header from '../../header';
+import Footer from '../../template/footer';
 
 export default class PageListHit extends Component {
   render(){
     return(
       <div className='d-flex '>
         <Header/>
-      <ul className='list-group  list-group-horizontal '>
-        <li className="list-group-item"><LogList/></li>
-        {/*<li className="list-group-item"><LogList/></li>*/}
-      </ul>
+        <ul className='list-group  list-group-horizontal '>
+          <li className="list-group-item"><LogList/></li>
+          {/*<li className="list-group-item"><LogList/></li>*/}
+        </ul>
+        <Footer/>
       </div>
 
     );

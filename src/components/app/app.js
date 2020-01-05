@@ -10,7 +10,7 @@ import ContactUs from '../page/contact-us'
 import Main from '../admin/pages/main'
 
 
-import {BrowserRouter as Router, Switch, Route, IndexRoute} from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route } from 'react-router-dom'; //{IndexRoute}
 
 const styles = {
   fontFamily: "sans-serif"

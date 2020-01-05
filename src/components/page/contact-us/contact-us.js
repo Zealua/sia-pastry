@@ -3,6 +3,7 @@ import GoogleMapReact from 'google-map-react';
 import './contact-us.css';
 
 import Header from "../../header"
+import Footer from '../../template/footer';
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
@@ -27,15 +28,15 @@ export default class ContactUs extends Component {
       <div>
         <Header/>
         <div  className="contactAs">
-          <div class="jumbotron">
+          <div className="jumbotron">
             <p className="firstText">- Контакти</p>
             <div className="secomdText">
-              <p class="lead">вул. Вільямса 14/19</p>
-              <p class="lead">+38 097 077 22 72</p>
-              <p class="lead">si.a.pastry@gmail.com</p>
+              <p className="lead">вул. Вільямса 14/19</p>
+              <p className="lead">+38 097 077 22 72</p>
+              <p className="lead">si.a.pastry@gmail.com</p>
             </div>
             <p className="firstText">— Запитання і пропозиції</p>
-            <p class="lead secomdText">si.a.pastry@gmail.com</p>
+            <p className="lead secomdText">si.a.pastry@gmail.com</p>
 
             <div style={{ height: '75vh', width: '70%' }} className="GoogleMap">
               <GoogleMapReact
@@ -47,6 +48,7 @@ export default class ContactUs extends Component {
             </div>
           </div>
         </div>
+        <Footer/>
       </div>
     );
   }

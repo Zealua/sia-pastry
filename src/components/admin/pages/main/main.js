@@ -5,8 +5,8 @@ import './main.css';
 import * as firebase from "firebase/app";
 import {
   FirebaseDatabaseProvider,
-  FirebaseDatabaseNode,
-  FirebaseDatabaseMutation
+  FirebaseDatabaseNode
+  // ,FirebaseDatabaseMutation
        } from "@react-firebase/database";
 import { config } from "../../../../config";
 import Login from '../login';
@@ -23,28 +23,27 @@ export default class Main extends Component {
   };
 
 setSecur=(data)=>{
-  console.log(data);
   this.setState({security:data});
 }
 
 setPass=(event)=>{
   const passValue= event.target.value;
   this.setState({pass: passValue});
-    console.log("F"+ passValue);
 }
 
 setEmail=(event)=>{
   const emailValue=event.target.value;
   this.setState({email: emailValue});
-  console.log("h"+emailValue);
 }
 
 getCookie(name) {
+  // let matches = document.cookie.match(new RegExp(
+  //   "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+  // ));
   let matches = document.cookie.match(new RegExp(
-    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+    "(?:^|; )" + name.replace(/([.$?*|{}()[]\/+^])/g, '\\$1') + "=([^;]*)"
   ));
   if(matches){
-    console.log(matches[1]==="true");
     return matches[1]==="true"; //matches ? decodeURIComponent(matches[1]) : undefined;
   } else{
     return false;
@@ -63,7 +62,6 @@ checkUser=() => {
 render() {
   const path = "/admin/Security";//this.props.path;
   const login = this.getCookie("Login");
-  console.log("onLoggin: "+ this.state.onLoggin + "loggin:" + login);
   if(!this.state.onLogginlo && !login){
     return (
       <div>

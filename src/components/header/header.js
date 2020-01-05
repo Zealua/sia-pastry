@@ -6,24 +6,24 @@ import './header.css';
 const Header = ({ onServiceChange }) => {
   return (
     <div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="collapse navbar-collapse" id="navbarColor03">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <Link to="/" class="nav-link">ГОЛОВНА<span class="sr-only">(current)</span></Link>
-          </li><li class="nav-item active">
-            <Link to="/fights/" class="nav-link">СТУДІЯ<span class="sr-only">(current)</span></Link>
-          </li><li class="nav-item active">
-          <Link to="/figters/" class="nav-link">СМАКИ<span class="sr-only">(current)</span></Link>
-        </li><li class="nav-item active">
-          <Link to="/contact_us" class="nav-link">КОНТАКТИ<span class="sr-only">(current)</span></Link>
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <div className="collapse navbar-collapse" id="navbarColor03">
+        <ul className="navbar-nav mr-auto">
+          <li className="nav-item">
+            <Link to="/" className="nav-link">ГОЛОВНА<span className="sr-only">(current)</span></Link>
+          </li><li className="nav-item">
+            <Link to="/fights/" className="nav-link">СТУДІЯ<span className="sr-only">(current)</span></Link>
+          </li><li className="nav-item">
+          <Link to="/figters/" className="nav-link">СМАКИ<span className="sr-only">(current)</span></Link>
+        </li><li className="nav-item">
+          <Link to="/contact_us" className="nav-link">КОНТАКТИ<span className="sr-only">(current)</span></Link>
         </li>  {/* <li>
           <Link to="/secret">Secret</Link>
        </li>*/}
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search"/>
-          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+        <form className="form-inline my-2 my-lg-0">
+          <input className="form-control mr-sm-2" type="text" placeholder="Search"/>
+          <button className="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
         </form>
         {/* <button
             onClick={onServiceChange}

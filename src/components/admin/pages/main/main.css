@@ -29,9 +29,9 @@ html, body {
 .full{
     width: 100%;
 }
-.container{
+/* .container{
     margin-top: 18%;  
-}
+} */
 .login-form{
     width: 300px;
     margin: auto;
