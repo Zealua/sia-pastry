@@ -7,17 +7,26 @@ const Header = ({ onServiceChange }) => {
   return (
     <div>
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <a className="navbar-brand" href="#"></a>
+    <button className="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarColor03" aria-controls="navbarColor03" 
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
+    </button>
       <div className="collapse navbar-collapse" id="navbarColor03">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item">
             <Link to="/" className="nav-link">ГОЛОВНА<span className="sr-only">(current)</span></Link>
-          </li><li className="nav-item">
+          </li>
+          <li className="nav-item">
             <Link to="/fights/" className="nav-link">СТУДІЯ<span className="sr-only">(current)</span></Link>
-          </li><li className="nav-item">
-          <Link to="/figters/" className="nav-link">СМАКИ<span className="sr-only">(current)</span></Link>
-        </li><li className="nav-item">
-          <Link to="/contact_us" className="nav-link">КОНТАКТИ<span className="sr-only">(current)</span></Link>
-        </li>  {/* <li>
+          </li>
+          <li className="nav-item">
+            <Link to="/figters/" className="nav-link">СМАКИ<span className="sr-only">(current)</span></Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/contact_us" className="nav-link">КОНТАКТИ<span className="sr-only">(current)</span></Link>
+          </li>  {/* <li>
           <Link to="/secret">Secret</Link>
        </li>*/}
         </ul>

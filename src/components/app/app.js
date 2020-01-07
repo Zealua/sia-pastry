@@ -28,8 +28,8 @@ export default class App extends React.Component {
         </div> */}
          <Switch>
             <Route  exact path="/" component={MainPage} />
-            <Route path="/fights" component={PageTest} />
-            <Route path="/figters" component={PageListHit} />
+            <Route path="/fights" component={MainPage} />     {/*PageTest*/}
+            <Route path="/figters" component={MainPage} /> {/*PageListHit*/}
             <Route path="/contact_us" component = {ContactUs} />
             <Route path="/admin" component = {Main} />
          </Switch>
