@@ -13,7 +13,6 @@ export default class PhotoSlider extends Component {
 
   }
 
-
   showSlides = (n) =>{
     if(n>this.props.amount){
       n=1;
@@ -21,16 +20,22 @@ export default class PhotoSlider extends Component {
     }
     if(n<1){
       n=this.props.amount;
-      this.setState({slideIndex:this.props.amount})
+      this.setState({slideIndex:this.props.amount});
     }
     console.log(n);
     var i;
     var dots = document.getElementsByClassName("dot");
     for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
+      if(document.getElementById("imgKey"+i)!=null)
+        document.getElementById("imgKey"+i).style.display="none";
     }
-    if(n>0){this.setState({imgMy:require('../../../photo-main/body'+n+'.jfif')})}
-      if(dots[n-1] != null) dots[n-1].className += " active";
+    document.getElementById("imgKey"+9).style.display="none";
+    if(n>0){
+      document.getElementById("imgKey"+n).style.display="block";
+      this.setState({imgMy:require('../../../photo-main/body'+n+'.jfif')})
+    }
+    if(dots[n-1] != null) dots[n-1].className += " active";
   }
 
   plusSlides(n){
@@ -67,21 +72,34 @@ export default class PhotoSlider extends Component {
       <span key={dotKey} className="dot" onClick={()=>this.currentSlide(element)}></span>
     );
   });
+  const Imagens = number.map((element) => {
+    let imgKey = "imgKey"+element;
+    let imgMyH = require('../../../photo-main/body'+element+'.jfif');
+    let styleImageHide={
+      display : "none",
+      width: "100%",
+      height: "367px",
+      background: "url('"+imgMyH+"') no-repeat center center",
+      backgroundSize: "100% cover"
+    }
+    if(element==1)
+      styleImageHide.display="block";
+    
+    return (
+      <div  id={imgKey} key={imgKey} className="mySlides fadeMuw" style={styleImageHide}></div>
+    );
+  });
 
   return (
   <div>
   <div className="slideshow-container">
-
-    <div className="mySlides fadeMuw" style={styleImage}> 
-    </div>
-
+    {Imagens}
     <a className="prev" onClick={()=>this.plusSlides(-1)}>&#10094;</a>
     <a className="next" onClick={()=>this.plusSlides(1)}>&#10095;</a>
   </div>
 <br/>
 
   <div style={styleSecond}>
-
     {Dots}
   </div>
 </div>
