@@ -5,7 +5,7 @@ import './app.css';
 import MainPage from '../page/main-page'
 import PageTest from '../page/page-test'
 // import Header from "../header"
-import PageListHit from '../page/page-list-hit'
+import StudiaPage from '../page/studia-page'
 import ContactUs from '../page/contact-us'
 import Main from '../admin/pages/main'
 
@@ -28,7 +28,7 @@ export default class App extends React.Component {
         </div> */}
          <Switch>
             <Route  exact path="/" component={MainPage} />
-            <Route path="/fights" component={MainPage} />     {/*PageTest*/}
+            <Route path="/about" component={StudiaPage} />     {/*PageTest*/}
             <Route path="/figters" component={MainPage} /> {/*PageListHit*/}
             <Route path="/contact_us" component = {ContactUs} />
             <Route path="/admin" component = {Main} />

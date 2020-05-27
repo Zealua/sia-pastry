@@ -19,7 +19,7 @@ const Header = ({ onServiceChange }) => {
             <Link to="/" className="nav-link">ГОЛОВНА<span className="sr-only">(current)</span></Link>
           </li>
           <li className="nav-item">
-            <Link to="/fights/" className="nav-link">СТУДІЯ<span className="sr-only">(current)</span></Link>
+            <Link to="/about/" className="nav-link">СТУДІЯ<span className="sr-only">(current)</span></Link>
           </li>
           <li className="nav-item">
             <Link to="/figters/" className="nav-link">СМАКИ<span className="sr-only">(current)</span></Link>

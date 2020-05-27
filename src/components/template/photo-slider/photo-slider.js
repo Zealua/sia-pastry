@@ -30,8 +30,9 @@ export default class PhotoSlider extends Component {
       if(document.getElementById("imgKey"+i)!=null)
         document.getElementById("imgKey"+i).style.display="none";
     }
-    document.getElementById("imgKey"+9).style.display="none";
-    if(n>0){
+    var newEl = document.getElementById("imgKey"+9);
+    if(newEl!=null) newEl.style.display="none";
+    if(n>0 && document.getElementById("imgKey" + n) != null){
       document.getElementById("imgKey"+n).style.display="block";
       this.setState({imgMy:require('../../../photo-main/body'+n+'.jfif')})
     }
